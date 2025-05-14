@@ -56,6 +56,8 @@ const HeroSection = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    autoplay:true,
+    autoplaySpeed:2000,
     
       responsive:[
              {
@@ -76,38 +78,38 @@ const HeroSection = () => {
 
   return (
     <div className='py-10'>
-        <div className="container  max-w-7xl mx-auto ">
+        <div className="container px-4 max-w-7xl mx-auto ">
             <div className='overflow-hidden relative'>
        <Slider {...settings} >
       {
         features.map((slide)=>{
             return <div className='px-2'>
-<img src={slide} alt="" className='h-70 shadow-sm rounded-2xl   object-cover max-xl:object-contain  w-full' />
+<img src={slide} alt="" className='shadow-sm rounded-2xl h-full  object-cover max-xl:object-contain  w-full' />
             </div> 
         })
       }
     </Slider>
     </div>
-    <div className="grid grid-cols-2 mt-4 gap-4 font-['poppins']">
- <div className="flex items-center p-4 bg-white rounded-2xl shadow ">
+    <div className="grid grid-cols-2 mt-4 gap-4 font-['poppins'] max-lg:grid-cols-1">
+ <div className="flex items-center p-4 bg-white rounded-2xl shadow max-sm:py-2">
       <div className="p-3 bg-blue-100 rounded-full">
-        <div className="h-8 w-8 text-green-400 text-2xl flex items-center justify-center">
+        <div className="h-8 w-8 text-green-400 text-2xl flex items-center justify-center max-lg:h-6 max-lg:w-6 max-lg:text-xl">
             <FaShoppingCart />
         </div>
       </div>
-      <div className="ml-4">
-        <h3 className="text-xl text-blue-600 font-semibold  tracking-wide capitalize">Prebuilt and user friendly health packages</h3>
+      <div className="ml-4 max-lg:mt-2">
+        <h3 className="text-xl text-blue-600 font-semibold  tracking-wide capitalize max-lg:text-lg max-sm:text-sm">Prebuilt and user friendly health packages</h3>
         <p className="text-sm text-gray-600 mt-1">Buy packages on all your needs.</p>
       </div>
     </div>
- <div className="flex items-center p-4 bg-white rounded-2xl shadow">
+ <div className="flex items-center p-4 bg-white rounded-2xl shadow max-sm:py-2">
       <div className="p-3 bg-blue-100 rounded-full">
-        <div className="h-8 w-8 text-green-400 text-2xl flex items-center justify-center">
+        <div className="h-8 w-8 text-green-400 text-2xl flex items-center justify-center max-lg:h-6 max-lg:w-6 max-lg:text-xl">
 <FaHome /> 
         </div>
       </div>
-      <div className="ml-4">
-        <h3 className="text-xl text-blue-600 tracking-wide  font-semibold">Free Home Sample Collection</h3>
+      <div className="ml-4 max-lg:mt-2">
+        <h3 className="text-xl text-blue-600 tracking-wide  font-semibold max-lg:text-lg max-sm:text-sm">Free Home Sample Collection</h3>
         <p className="text-sm text-gray-600 mt-1">Book Free Home Collection across the city.</p>
       </div>
     </div>
